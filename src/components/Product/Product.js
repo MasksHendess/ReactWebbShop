@@ -5,7 +5,7 @@ export default function Product()  {
   
     return(
 
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '15rem' }}>
   <Card.Img variant="top" src="https://img.scryfall.com/cards/large/front/b/e/be5f45bb-de82-4e64-a9c3-e8bac5d4fa75.jpg?1561957068" />
   <Card.Body>
     <Card.Title>Cool Product</Card.Title>

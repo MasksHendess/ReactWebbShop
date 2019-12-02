@@ -4,7 +4,7 @@ export default function Footer()  {
   
     return(
 <div id="F00ter">
-Yadiyadiyada@edvinforpresident.com
+copyright 2019 F R E K Y F A S H I O N
 </div>
     )
 

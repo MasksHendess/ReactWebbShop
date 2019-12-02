@@ -1,15 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 // Components
-import HeaderComponent from './components/HeaderComponent.js';
+import HeaderDp from './components/Header/HeaderDp.js';
+import HeaderButton from './components/Header/HeaderButton.js';
+import HeaderSerchBar from './components/Header/HeaderSerchBar.js';
+import HeaderLogo from './components/Header/HeaderLogo.js';
+import HeaderMenu from './components/Menu/HeaderMenu.js';
 import HeroComponent from './components/HeroComponent.js';
-import Product from './components/Product.js';
-import BigProduct from './components/BigProduct.js';
-import BoringStuff from './components/BoringStuff.js';
+import Product from './components/Product/Product.js';
+import BigProduct from './components/Product/BigProduct.js';
+import BottomMenu from './components/Menu/BottomMenu.js';
 import Footer from './components/Footer.js';
-
 
 // Bootstrap 
 import Container from 'react-bootstrap/Container';
@@ -20,14 +22,37 @@ import Col from 'react-bootstrap/Col';
 function App() {
   return (
     
-    <Container>
+<Container>
      <h1>F R E K Y F A S H I O N</h1>
-
-<Row>
-     <HeaderComponent />
-</Row>
-     <HeroComponent />
      <Row>
+<Col col-sm-1 col-xs-1 col-md-1>
+     <HeaderLogo/>
+     </Col>
+    <Col col-sm-3 col-xs-1 col-md-2>
+     <HeaderSerchBar />
+     </Col>
+    <Col col-sm-3 col-xs-1 col-md-2>
+     <HeaderDp />
+     </Col>
+     <Col col-sm-3 col-xs-1 col-md-2>
+     <HeaderButton />
+     </Col>
+     <Col col-sm-3 col-xs-1 col-md-2>
+     <HeaderButton />
+     </Col>
+     <Col col-sm-3 col-xs-1 col-md-2>
+     <HeaderButton />
+     </Col>
+</Row>
+<Row>
+  <Col>
+  <HeaderMenu/>
+  </Col>
+</Row>
+<Row>
+     <HeroComponent />
+</Row>
+<Row>
        <Col col-sm-1 col-xs-4 col-md-3 >
      <Product col-sm-1 col-xs-4 col-md-3 />
      </Col>
@@ -39,22 +64,41 @@ function App() {
      <Col col-sm-1 col-xs-4 col-md-3 >
      <Product col-sm-1 col-xs-4 col-md-3 />
      </Col>
-     </Row>
-     <Row>
+</Row>
+<Row>
      <Col col-sm-1 col-xs-6 col-md-4 >
      <BigProduct />
      </Col>
      <Col col-sm-1 col-xs-6 col-md-4 >
      <BigProduct />
      </Col>
-     </Row>
-     <Row>
-     <BoringStuff />
-     </Row>
-     <Row>
+</Row>
+<Row>
+      <Col col-sm-3 col-xs-1 col-md-2>
+     <HeaderButton />
+     </Col>
+     <Col col-sm-3 col-xs-1 col-md-2>
+     <HeaderButton />
+     </Col>
+     <Col col-sm-3 col-xs-1 col-md-2>
+     <HeaderButton />
+     </Col>
+</Row>
+<Row>
+<Col col-sm-3 col-xs-1 col-md-2>
+  <BottomMenu />
+  </Col>
+  <Col col-sm-3 col-xs-1 col-md-2>
+  <BottomMenu />
+  </Col>
+  <Col col-sm-3 col-xs-1 col-md-2>
+  <BottomMenu />
+  </Col>
+</Row>
+<Row>
      <Footer />
-     </Row>
-     </Container>
+</Row>
+</Container>
   );
 }
 
