@@ -9,6 +9,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+  BrowserRouter
+} from "react-router-dom";
 
 export default function BigProduct(props)  {
      const product ={
@@ -16,6 +24,14 @@ export default function BigProduct(props)  {
      price: props.Price,
      img: props.Img
    }
+
+   function activate()
+ {
+   localStorage.clear()
+   localStorage.setItem("name", product.name)
+   localStorage.setItem("img", product.img)
+   localStorage.setItem("price", product.price)
+ }
     return(
       <Container>
 <Card>
@@ -33,7 +49,7 @@ export default function BigProduct(props)  {
       Price:{product.price}$
       </p>
     </Card.Text>
-    <Button variant="primary">Buy</Button>
+    <Link to="/ProductPage" onClick={activate} className="btn btn-primary">View Product Details</Link>
   </Card.Body>
   </Col>
   </Row>

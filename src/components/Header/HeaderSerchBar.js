@@ -13,7 +13,6 @@ export default class HeaderSerchBar extends React.Component  {
       <Button variant="outline-success">Search</Button>
     </Form>
     )
-
   };
 }
 

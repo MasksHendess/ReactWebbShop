@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import FeaturedProductDp from './FeaturedProductDp';
@@ -14,8 +14,36 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 
-export default function FeaturedProductComponent()  {
-  
+export default class FeaturedProductComponent extends Component  {
+
+
+
+  constructor(props) {
+    super(props);
+    this.state = { name: '' ,
+      img:'',
+      price: ''
+    };
+   // this.incrementCounter = this.incrementCounter.bind(this);
+  }
+   
+ /*fetchMyAPI() {
+      let product = localStorage.getItem('product')
+ console.log(product)
+   this.setState({product: product
+});
+    }*/
+  componentDidMount() {
+       let Name = localStorage.getItem('name')
+       let Price = localStorage.getItem('price')
+       let Img = localStorage.getItem('img')
+ console.log(Name)
+   this.setState({name: Name,
+   price: Price,
+   img: Img
+});
+        };
+   render() {
     return(
       
 <Container>
@@ -23,10 +51,10 @@ export default function FeaturedProductComponent()  {
  <Card.Body>
  <Row>
  <Col col-sm-1 col-xs-1 col-md-1>
- <Card.Img variant="top" src="https://img.scryfall.com/cards/large/front/0/2/029946b5-3d15-4a72-9d1a-bb36347a87a0.jpg?1562542588" />
+ <Card.Img variant="top" src={this.state.img} />
  </Col>
  <Col col-sm-1 col-xs-1 col-md-1>
-    <Card.Title>Product Name</Card.Title>
+<Card.Title> {this.state.name}</Card.Title>
     <Card.Text>
      
   Product Information much lorem very ipsum jane doe at nomail com
@@ -35,7 +63,9 @@ export default function FeaturedProductComponent()  {
   Product Information much lorem very ipsum jane doe at nomail com
   Product Information much lorem very ipsum jane doe at nomail com
 
-  PRICE: 500
+  <p>
+  Product Price: {this.state.price} $
+  </p>
     </Card.Text>
     <FeaturedProductRadio />
   <FeaturedProductDp />
@@ -47,5 +77,5 @@ export default function FeaturedProductComponent()  {
 </Card>
 </Container>
     )
-
+   }
 }

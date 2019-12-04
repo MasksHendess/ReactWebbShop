@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
+
+import FeaturedProductComponent from './FeaturedProductComponent';
+
 // Bootstrap 
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,7 +27,6 @@ export default function Product(props) {
      img: props.Img
    }
 console.log(product);
-  const [count, setCount] = useState(0);
 
   /*return (
     <div>
@@ -34,6 +36,13 @@ console.log(product);
       </button>
     </div>
   );*/
+ function activate()
+ {
+   localStorage.clear()
+   localStorage.setItem("name", product.name)
+   localStorage.setItem("img", product.img)
+   localStorage.setItem("price", product.price)
+ }
   return(
 <Container>
 <Card >
@@ -51,8 +60,8 @@ console.log(product);
       Price:{product.price}$
       </p>
     </Card.Text>
-    <Button>Buy</Button>
-  </Card.Body>
+    <Link to="/ProductPage" onClick={activate} className="btn btn-primary">View Product Details</Link>
+    </Card.Body>
   </Col>
   </Row>
 </Card>
@@ -60,3 +69,6 @@ console.log(product);
     )
 
 }
+
+//<FeaturedProductComponent Name = {product.name} Img={product.img} Price={product.price}/>
+  
