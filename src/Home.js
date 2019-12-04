@@ -48,7 +48,7 @@ export default class Home extends React.Component{
     <br/>
       <Row>
         <Col col-sm-10 col-xs-10 col-md-10>
-          <HeroComponent />
+          <HeroComponent Name="Coolest Product" Price="350" Img ="https://img.scryfall.com/cards/large/front/c/3/c3ed9cd3-5e6a-4e86-b120-ff27b744311d.jpg?1562875268" />
         </Col>
       </Row>
 
@@ -59,12 +59,12 @@ export default class Home extends React.Component{
         </Col>
 
         <Col col-sm-1 col-xs-4 col-md-3>
-           <Product Name="Product 2" Price="400" Img ="https://img.scryfall.com/cards/large/front/b/e/be5f45bb-de82-4e64-a9c3-e8bac5d4fa75.jpg?1561957068" />
+           <Product Name="Product 2" Price="400" Img ="https://img.scryfall.com/cards/large/front/b/d/bd8fa327-dd41-4737-8f19-2cf5eb1f7cdd.jpg?1562933099" />
        
         </Col>
 
         <Col col-sm-1 col-xs-4 col-md-3>
-           <Product Name="Product 3" Price="600" Img ="https://img.scryfall.com/cards/large/front/b/e/be5f45bb-de82-4e64-a9c3-e8bac5d4fa75.jpg?1561957068" />
+           <Product Name="Product 3" Price="600" Img ="https://img.scryfall.com/cards/large/front/5/d/5d10b752-d9cb-419d-a5c4-d4ee1acb655e.jpg?1562736365" />
        
         </Col>
       </Row>
@@ -72,10 +72,10 @@ export default class Home extends React.Component{
       <br />
       <Row>
         <Col col-sm-1 col-xs-6 col-md-4>
-          <BigProduct />
+          <BigProduct Name="BigProduct 1" Price="1000" Img="https://img.scryfall.com/cards/large/front/8/7/87da5ad8-b35f-4f9c-b17a-bb2563cbc186.jpg?1562170624" />
         </Col>
         <Col col-sm-1 col-xs-6 col-md-4>
-          <BigProduct />
+          <BigProduct Name ="BigProduct 2" Price="5000" Img="https://img.scryfall.com/cards/large/front/2/8/28a1f83c-a9ef-463e-97b5-2ca3b7232f82.jpg?1562827264" />
         </Col>
       </Row>
 
