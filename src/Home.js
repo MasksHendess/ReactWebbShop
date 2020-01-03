@@ -12,6 +12,7 @@ import BigProduct from './components/Product/BigProduct.js';
 import BottomMenu from './components/Menu/BottomMenu.js';
 import Footer from './components/Footer.js';
 import HeaderComponent from './components/Header/HeaderComponent';
+import BottomMenuComponent from './BottomMenuComponent.js';
 
 
 import {
@@ -43,9 +44,7 @@ export default class Home extends React.Component{
   render(){
   return (
     <Container>
-    
-    <HeaderComponent />
-    <br/>
+    <br />
       <Row>
         <Col col-sm-10 col-xs-10 col-md-10>
           <HeroComponent Name="Coolest Product" Price="350" Img ="https://img.scryfall.com/cards/large/front/c/3/c3ed9cd3-5e6a-4e86-b120-ff27b744311d.jpg?1562875268" />
@@ -79,36 +78,8 @@ export default class Home extends React.Component{
         </Col>
       </Row>
 
-      <br />
-      <Row>
-        <Col col-sm-3 col-xs-1 col-md-2>
-          <HeaderButton />
-        </Col>
-        <Col col-sm-3 col-xs-1 col-md-2>
-          <HeaderButton />
-        </Col>
-        <Col col-sm-3 col-xs-1 col-md-2>
-          <HeaderButton />
-        </Col>
-        <Col col-sm-3 col-xs-1 col-md-2>
-          <HeaderButton />
-        </Col>
-      </Row>
-      <br />
-      <Row>
-        <Col col-sm-3 col-xs-1 col-md-2>
-          <BottomMenu />
-        </Col>
-        <Col col-sm-3 col-xs-1 col-md-2>
-          <BottomMenu />
-        </Col>
-        <Col col-sm-3 col-xs-1 col-md-2>
-          <BottomMenu />
-        </Col>
-      </Row>
-      <Row>
+     <BottomMenuComponent />
         <Footer />
-      </Row>
     </Container>
   );
 }

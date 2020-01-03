@@ -10,11 +10,14 @@ import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import ProductPage from './ProductPage.js';
-import Home from './Home.js';
+import Home from './Home';
+import HeaderComponent from './components/Header/HeaderComponent';
 
 const routing = (
   <Router>
-
+  <HeaderComponent />
+  
+  <div style={{display: 'flex',  justifyContent:'center'}}>
   <Nav defaultActiveKey="/home" as="ul">
   <Nav.Item as="li">
     <Nav.Link href="/">Home</Nav.Link>
@@ -44,6 +47,8 @@ const routing = (
     <Nav.Link eventKey="link-2">Cart</Nav.Link>
   </Nav.Item>
 </Nav>
+
+</div>
       <Route exact path="/" component={Home} />
       <Route path="/ProductPage" component={ProductPage} />
     

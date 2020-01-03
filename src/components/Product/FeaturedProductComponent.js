@@ -56,7 +56,7 @@ export default class FeaturedProductComponent extends Component  {
  <Col col-sm-1 col-xs-1 col-md-1>
 <Card.Title> {this.state.name}</Card.Title>
     <Card.Text>
-     
+     <b>Product Information</b><br/>
   Product Information much lorem very ipsum jane doe at nomail com
   Product Information much lorem very ipsum jane doe at nomail com
   Product Information much lorem very ipsum jane doe at nomail com
@@ -64,7 +64,9 @@ export default class FeaturedProductComponent extends Component  {
   Product Information much lorem very ipsum jane doe at nomail com
 
   <p>
+  <b>
   Product Price: {this.state.price} $
+  </b>
   </p>
     </Card.Text>
     <FeaturedProductRadio />

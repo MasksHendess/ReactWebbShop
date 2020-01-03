@@ -17,30 +17,30 @@ export default class HeaderComponent extends React.Component  {
   render(){
     return(
    <Row>
-        <Col col-sm-1 col-xs-2 col-md-1>
+        <Col sm-1 xs-2 md-1>
           <Row>
-            <Col col-sm-3 col-xs-4 col-md-3>
+            <Col sm-3 col-xs-4 col-md-3>
               <HeaderLogo />
             </Col>
-            <Col col-sm-3 col-xs-4 col-md-2>
+            <Col sm-3 col-xs-4 col-md-2>
               <HeaderSerchBar />
             </Col>
           </Row>
         </Col>
-        <Col col-sm-3 col-xs-2 col-md-2></Col>
+        <Col sm-3 col-xs-2 col-md-2></Col>
         <Col>
           <Row>
-            <Col col-sm-3 col-xs-2 col-md-2>
+            <Col sm-3 col-xs-2 col-md-2>
               <HeaderDp />
             </Col>
-            <Col col-sm-3 col-xs-2 col-md-2>
-              <HeaderButton />
+            <Col sm-3 col-xs-2 col-md-2>
+              <HeaderButton text="Home"/>
             </Col>
-            <Col col-sm-3 col-xs-2 col-md-2>
-              <HeaderButton />
+            <Col sm-3 col-xs-2 col-md-2>
+              <HeaderButton text="Saved"/>
             </Col>
-            <Col col-sm-3 col-xs-2 col-md-2>
-              <HeaderButton />
+            <Col sm-3 col-xs-2 col-md-2>
+              <HeaderButton text="MyCart"/>
             </Col>
           </Row>
         </Col>

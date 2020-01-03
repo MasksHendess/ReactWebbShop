@@ -1,43 +1,50 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import FeaturedProductDp from './FeaturedProductDp';
+import React, { Component } from 'react';
+import { MDBFormInline, MDBInput } from 'mdbreact';
 
-// Bootstrap 
-import Container from 'react-bootstrap/Container';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+class InputPage extends Component {
+  state = {
+    radio: ''
+  };
 
-import Dropdown from 'react-bootstrap/Dropdown';
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
+  onClick = nr => () => {
+    this.setState({
+      radio: nr
+    });
+  };
 
-export default function FeaturedProductRadio()  {
-  
-    return(
-      
-
-    <form>
-        <div className="radio">
-          <label>
-            <input type="radio" value="option1" checked={true} />
-            White
-          </label>
-        </div>
-        <div className="radio">
-          <label>
-            <input type="radio" value="option2" />
-            Not White
-          </label>
-        </div>
-        <div className="radio">
-          <label>
-            <input type="radio" value="option3" />
-            Black
-          </label>
-        </div>
-      </form>
-    )
-
+  render() {
+    return (
+      <MDBFormInline>
+        <MDBInput
+          gap
+          onClick={this.onClick(1)}
+          checked={this.state.radio === 1 ? true : false}
+          label='White'
+          type='radio'
+          id='radio1'
+          containerClass='mr-5'
+        />
+        <MDBInput
+          gap
+          onClick={this.onClick(2)}
+          checked={this.state.radio === 2 ? true : false}
+          label='Not White'
+          type='radio'
+          id='radio2'
+          containerClass='mr-5'
+        />
+        <MDBInput
+          gap
+          onClick={this.onClick(3)}
+          checked={this.state.radio === 3 ? true : false}
+          label='Black'
+          type='radio'
+          id='radio3'
+          containerClass='mr-5'
+        />
+      </MDBFormInline>
+    );
+  }
 }
+
+export default InputPage;
